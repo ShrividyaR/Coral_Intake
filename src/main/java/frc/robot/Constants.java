@@ -17,7 +17,8 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
   }
 
-  public static class ArmConstants {
-    
+  public static class MotorConstants {
+    //CHANGE!!
+    public static final int NEO550_CURRENT_LIMIT = 0;
   }
 }

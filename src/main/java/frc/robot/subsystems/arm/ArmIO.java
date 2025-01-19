@@ -1,15 +1,15 @@
 package frc.robot.subsystems.arm;
 
 public interface ArmIO {
-    public void getEncoderSpeed();
+    public double getEncoderSpeed();
 
-    public void getEncoderPosition();
+    public double getEncoderPosition();
 
-    public void getSpeed();
+    public double getSpeed();
 
     public void periodicUpdate();
 
     public void setSpeed(double speed);
 
-    public void setPosition(position);
+    public void setPosition(double position);
 }

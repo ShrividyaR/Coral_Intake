@@ -1,37 +1,34 @@
 package frc.robot.subsystems.arm;
 
+import edu.wpi.first.math.controller.ProfiledPIDController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Arm extends SubsystemBase {
     public ArmIO armIO;
 
-    public Arm(ArmIO) {
-    private ArmIO armIO;
+    public Arm(ArmIO io) {
+        armIO = io;
     }
 
     public double getEncoderPosition() {
-        armIO.getEncoderPosition();
+       return armIO.getEncoderPosition();
     }
 
     public double getEncoderSpeed() {
-        armIO.getEncoderSpeed();
+        return armIO.getEncoderSpeed();
     }
 
     public double getSpeed() {
-        armIO.getSpeed();
+        return armIO.getSpeed();
     }
 
-    public double setSpeed(speed) {
+    public void setSpeed(double speed) {
         armIO.setSpeed(speed);
     }
 
-    public double getArmCurrent() {
-        return armIO.getArmCurrent();
-    }
-
     public void setPosition(double position) {
-        armEncoder.setPosition(position);
+        armIO.setPosition(position);
     }
 
     @Override
